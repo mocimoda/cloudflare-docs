@@ -10,7 +10,7 @@ description: Install and set up the Workers Vitest integration.
 
 import { DirectoryListing } from "~/components"
 
-For most users, Cloudflare recommends using the Workers Vitest integration for testing Workers and [Pages Functions](/pages/functions/) projects. [Vitest](https://vitest.dev/) is a popular JavaScript testing framework featuring a very fast watch mode, Jest compatibility, and out-of-the-box support for TypeScript. In this integration, Cloudflare provides a custom pool that allows your Vitest tests to run *inside* the Workers runtime.
+Testing Workers and Pages Functions within our Workers runtime can be challenging and requires additional manual setup. To address this, Cloudflare offers the Workers Vitest integration, which streamlines the process by providing a custom pool that lets your tests run directly inside the Workers runtime using [Vitest](https://vitest.dev/). Vitest is a modern JavaScript testing framework with a wide range of features such as an instant watch mode, snapshot testing, code coverage, built-in TypeScript support and seamless Jest compatibility.
 
 The Workers Vitest integration:
 
