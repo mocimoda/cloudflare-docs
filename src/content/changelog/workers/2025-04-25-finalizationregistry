@@ -1,0 +1,12 @@
+---
+title: FinalizationRegistry and WeakRefs support
+description: You can now use FinalizationRegistry and WeakRefs in workers
+products:
+  - workers
+date: 2025-04-25T12:00:00Z
+---
+
+With the `'enable_weak_ref'` compatibility flag enabled, it is now possible
+for workers to use the standard `FinalizationRegistry` and `WeakRef` APIs.
+
+Consult the [MDN documentation for FinalizationRegistry`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) for full details on the API.
