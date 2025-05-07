@@ -81,7 +81,7 @@ If you use cache rules, image transformations, and zone versioning simultaneousl
 
 Edge Cache TTL refers to the maximum cache time-to-live (TTL), or how long an asset should be considered fresh or available to serve from Cloudflare’s cache in response to requests. This setting has three primary options:
 
-- **Use cache control-header if present, bypass cache if not**: If a cache-control header is present on the response, follow its directives. If not, skip caching entirely.
+- **Use cache control-header if present, bypass cache if not**: If a [cache-control header](/cache/concepts/cache-control/) is present on the response, follow its directives. If not, skip caching entirely.
 - **Use cache-control header if present, use default Cloudflare caching behavior if not**: If a cache-control header is present on the response, follow its directives. If not, cache in accordance with our [default edge TTL settings](/cache/how-to/configure-cache-status-code/#edge-ttl).
 - **Ignore cache-control header and use this TTL**: Completely ignore any cache-control header on the response and instead cache the response for a duration specified in the timing dropdown.
 
@@ -93,7 +93,7 @@ API configuration object name: `"edge_ttl"`.
 
 | API values          | Configuration                                                                                                                   |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `respect_origin`    | Use cache-control header if present, use default [Cloudflare caching behavior](/cache/concepts/default-cache-behavior/) if not. |
+| `respect_origin`    | Use [cache-control header](/cache/concepts/cache-control/) if present, use default [Cloudflare caching behavior](/cache/concepts/default-cache-behavior/) if not. |
 | `override_origin`   | Ignore cache-control header and use this TTL.                                                                                   |
 | `bypass_by_default` | Use cache control-header if present, bypass cache if not.                                                                       |
 |                     |                                                                                                                                 |

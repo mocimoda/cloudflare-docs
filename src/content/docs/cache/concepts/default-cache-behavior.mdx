@@ -12,7 +12,7 @@ import { FeatureTable } from "~/components"
 Cloudflare respects the origin web server’s cache headers in the following order unless an [Edge Cache TTL cache rule](/cache/how-to/cache-rules/settings/#edge-ttl) overrides the headers. Refer to the [Edge TTL](/cache/how-to/configure-cache-status-code/#edge-ttl) section for details on default TTL behavior.
 
 * Cloudflare **does not** cache the resource when:
-  * The `Cache-Control` header is set to `private`, `no-store`, `no-cache`, or `max-age=0`.
+  * The [`Cache-Control` header](/cache/concepts/cache-control/) is set to `private`, `no-store`, `no-cache`, or `max-age=0`.
   * The [Set-Cookie header](/cache/concepts/cache-behavior/#interaction-of-set-cookie-response-header-with-cache) exists.
   * The HTTP request method is anything other than a `GET`.
 * Cloudflare **does** cache the resource when:

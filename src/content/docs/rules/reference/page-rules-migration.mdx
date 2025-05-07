@@ -537,7 +537,7 @@ You configured a Page Rule turning on caching of every response with status code
    - **Then**:
      - **Cache eligibility**: Eligible for cache
      - **Setting**: Edge TTL
-       - Use cache-control header if present, use default Cloudflare caching behavior if not
+       - Use [cache-control header](/cache/concepts/cache-control/) if present, use default Cloudflare caching behavior if not
        - **Status code TTL**:
          - **Scope**: _Range_
          - **From**: _200_
@@ -803,7 +803,7 @@ You configured a Page Rule adjusting Edge Cache TTL for all subdomains of `examp
    - **Then**:
      - **Cache eligibility**: Eligible for cache
      - **Setting**: Edge TTL
-       - Ignore cache-control header and use this TTL
+       - Ignore [cache-control header](/cache/concepts/cache-control/) and use this TTL
        - **Input time-to-live (TTL)**: _1 day_
 
     </div>

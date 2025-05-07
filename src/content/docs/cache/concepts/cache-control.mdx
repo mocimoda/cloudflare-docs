@@ -4,6 +4,7 @@ pcx_content_type: concept
 head:
   - tag: title
     content: Origin Cache Control
+description: Learn how the 'cache-control' header works with Cloudflare's Origin Cache Control feature, which ensures that Cloudflare respects caching directives from your origin server.
 
 ---
 
@@ -24,9 +25,9 @@ In the following sections, we will provide more details regarding:
 * How Origin Cache Control behaves with `Cache-Control` directives.
 * How other Cloudflare products interact with `Cache-Control` directives.
 
-## `Cache-control` directives
+## `Cache-control` header directives
 
-A `Cache-Control` header can include a number of directives, and the directive dictates who can cache a resource along with how long those resources can be cached before they must be updated.
+A `Cache-Control` header can include a number of directives. The `Cache-Control` header's directives dictate who can cache a resource along with how long those resources can be cached before they must be updated.
 
 :::note[Note]
 
@@ -86,7 +87,7 @@ The `stale-if-error` directive is ignored if [Always Online](/cache/how-to/alway
 Additional directives that influence cache behavior are listed below.
 
 * `no-transform` — Indicates that an intermediary — regardless of whether it implements a cache — must not transform the payload.
-* `vary` — Cloudflare does not consider vary values in caching decisions. Nevertheless, vary values are respected when [Vary for images](/cache/advanced-configuration/vary-for-images/) is configured and when the vary header is [`vary: accept-encoding`](/speed/optimization/content/compression/).
+* `vary` — Cloudflare does not consider vary values in caching decisions. Nevertheless, vary values are respected when [Vary for images](/cache/advanced-configuration/vary-for-images/) is configured and when the vary `cache-control` header is [`vary: accept-encoding`](/speed/optimization/content/compression/).
 * `immutable` — Indicates to clients the response body does not change over time. The resource, if unexpired, is unchanged on the server. The user should not send a conditional revalidation request, such as `If-None-Match` or `If-Modified-Since`, to check for updates, even when the user explicitly refreshes the page. This directive has no effect on public caches like Cloudflare, but does change browser behavior.
 
 ### Understand `no-store` and `no-cache` directives
