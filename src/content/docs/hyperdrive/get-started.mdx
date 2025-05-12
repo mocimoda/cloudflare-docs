@@ -27,6 +27,31 @@ Learn more about the [databases that Hyperdrive supports](/hyperdrive/reference/
 
 :::
 
+## Quick start
+
+If you want to skip the steps and get started quickly, click on the button below.
+
+<Tabs syncKey ="sqlType">
+<TabItem label="PostgreSQL">
+
+**PostgreSQL deployment**
+
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/docs-examples/tree/hyperdrive-get-started/hyperdrive/hyperdrive-get-started-postgres)
+
+</TabItem>
+<TabItem label="MySQL">
+
+**MySQL deployment**
+
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/docs-examples/tree/hyperdrive-get-started/hyperdrive/hyperdrive-get-started-mysql)
+
+</TabItem>
+</Tabs>
+
+This creates a repository in your GitHub account and deploys the application to Cloudflare Workers. Use this option if you are familiar with Cloudflare Workers, and wish to skip the step-by-step guidance.
+
+You may wish to manually follow the steps if you are new to Cloudflare Workers.
+
 ## Prerequisites
 
 Before you begin, ensure you have completed the following:
@@ -104,7 +129,7 @@ To create your first Hyperdrive, you will need:
 
 Hyperdrive accepts the combination of these parameters in the common connection string format used by database drivers:
 
-<Tabs>
+<Tabs syncKey ="sqlType">
 	<TabItem label="PostgreSQL">
 		```txt
 
@@ -179,7 +204,7 @@ Once you have created a Hyperdrive configuration and bound it to your Worker, yo
 
 ### Install a database driver
 
-<Tabs>
+<Tabs syncKey ="sqlType">
 <TabItem label="PostgreSQL">
 
 To connect to your database, you will need a database driver which allows you to authenticate and query your database. For this tutorial, you will use [Postgres.js](https://github.com/porsager/postgres), one of the most widely used PostgreSQL drivers.
@@ -206,7 +231,7 @@ With the driver installed, you can now create a Worker script that queries your 
 
 ### Write a Worker
 
-<Tabs>
+<Tabs syncKey ="sqlType">
 <TabItem label="PostgreSQL">
 After you have set up your database, you will run a SQL query from within your Worker.
 
