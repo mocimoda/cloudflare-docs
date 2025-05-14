@@ -16,7 +16,7 @@ Because an Agent is just like a Worker script, it can create Workflows defined i
 
 Agents and Workflows have some similarities: they can both run tasks asynchronously. For straightforward tasks that are linear or need to run to completion, a Workflow can be ideal: steps can be retried, they can be cancelled, and can act on events.
 
-Agents do not have to run to completion: they can loop, branch and run forever, and they can also interact directly with users (over HTTP or WebSockets). An Agent can be used to trigger multiple Workflows as it runs, and can thus be used to co-ordinate and manage Workflows to achieve its goals.
+Agents do not have to run to completion: they can loop, branch and run forever, and they can also interact directly with users (over HTTP or WebSocket). An Agent can be used to trigger multiple Workflows as it runs, and can thus be used to co-ordinate and manage Workflows to achieve its goals.
 
 :::
 
@@ -97,7 +97,7 @@ You can also call a Workflow that is defined in a different Workers script from 
 		// Required:
 		"name": "EMAIL_WORKFLOW",
 		"class_name": "MyWorkflow",
-		// Optional: set tthe script_name field if your Workflow is defined in a
+		// Optional: set the script_name field if your Workflow is defined in a
 		// different project from your Agent
 		"script_name": "email-workflows"
 }
