@@ -16,7 +16,6 @@ This section covers SCIM provisioning for the Cloudflare dashboard only. If you 
 - If a user is the only Super Administrator on an Enterprise account, they will not be deprovisioned.
 - Cloudflare currently only supports [Account-scoped Roles](/fundamentals/setup/manage-members/roles/#account-scoped-roles) and does not support Domain-scoped Roles provisioning via SCIM.
 - Cloudflare does not allow custom user groups.
-- Cloudflare now supports the ability to sync custom User Groups via an upstream Identity Provider. This feature is in public beta Docs<Link> Blog<Link>
 
 ## Prerequisites
 
@@ -94,7 +93,7 @@ The **Update User Attributes** option is not supported.
 5. In the Push Groups tab, add the Okta groups you want to synchronize with Cloudflare Dash. You can view these groups in the dash under Manage Account > Manage members > Members > User Groups.
 
 :::note
-You must have opted into the Cloudflare User Groups Public Beta to synchronize groups from Okta to Cloudflare. Refer to the [Usesr Groups](/fundamentals/setup/manage-members/user-groups/) documentation for more information.
+You must have opted into the Cloudflare User Groups Public Beta to synchronize groups from Okta to Cloudflare. Refer to the [User Groups](/fundamentals/setup/manage-members/user-groups/) documentation for more information.
 :::
 
 To verify the integration, select **View Logs** in the Okta SCIM application, and check the Cloudflare Dash Audit Logs by navigating to **Manage Account** > **Audit Log**. 
@@ -124,7 +123,7 @@ This will provision all of the users in the group(s) affected to your Cloudflare
 1. Once the SCIM application is created, [assign users and groups to the application](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/assign-user-or-group-access-portal?pivots=portal.)
 
 :::note
-You must have opted into the Cloudflare User Groups Public Beta to synchronize groups from Okta to Cloudflare<link to User Groups docs>
+You must have opted into the Cloudflare User Groups Public Beta to synchronize groups from Okta to Cloudflare. Refer to the [User Groups](/fundamentals/setup/manage-members/user-groups/) documentation for more information.
 
 Currently, groups need to match a specific format to provision specific Cloudflare account-level roles. Cloudflare is in the process of adding Cloudflare Groups, which can take in freeform group names in the future.
 :::
