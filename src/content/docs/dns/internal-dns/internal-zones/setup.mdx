@@ -19,20 +19,12 @@ When setting up internal zones, observe the following conditions:
 
 <Tabs syncKey="dashPlusAPI"> <TabItem label="Dashboard">
 
-1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login) and select an account.
-2. Go to **Internal DNS** and select **Create an internal zone**.
-3. Give your internal zone a descriptive name, observing the [configuration conditions](#configuration-conditions).
-4. Add DNS records to your internal zone using your preferred option:
-- [Import](/dns/manage-dns-records/how-to/import-and-export/) a formatted BIND file.
-- Select **Add a record** > **Create** under the selected record type and **Save record** after filling in the required fields. Refer to [DNS record types](/dns/manage-dns-records/reference/dns-record-types/) for details.
-:::note
-Creating multiple internal DNS records in batch is currently only supported via API.
-:::
+<Render file="internal-zone-create-dash" />
 
 </TabItem>
 <TabItem label="API">
 
-<Render file="internal-zone-create" />
+<Render file="internal-zone-create-api" />
 
 </TabItem> </Tabs>
 
