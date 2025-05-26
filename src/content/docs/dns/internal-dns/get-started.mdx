@@ -81,7 +81,9 @@ Since the resolver policy will require a [DNS view](/dns/internal-dns/dns-views/
 
 <Tabs syncKey="dashPlusAPI"> <TabItem label="Dashboard">
 
-<Render file="internal-dns-view-create-dash"/>
+<Render file="internal-dns-view-create-dash" params={{
+	conditional: "get-started-detail"}}
+/>
 
 </TabItem> <TabItem label="API">
 
@@ -123,3 +125,5 @@ Use the rule settings object to define `resolve_dns_internally`, specifying `vie
 - `public_dns`: In case the response from the internal zone is REFUSED, NXDOMAIN, or a response with a CNAME type, Gateway DNS resolver sends the query to Cloudflare 1.1.1.1 public resolver and tries to resolve the query via public DNS.
 
 </TabItem> </Tabs>
+
+Once you add the Gateway resolver policy, it will be listed in the respective internal view under **Resolver policies referencing this view**.
