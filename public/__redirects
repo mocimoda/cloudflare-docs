@@ -1298,7 +1298,7 @@
 /support/account-management-billing/cloudflare-billing-policy/ /billing/billing-policy/ 301
 /support/account-management-billing/billing-add-on-service/ /billing/usage-based-billing/ 301
 /support/account-management-billing/understanding-cloudflare-sales-tax/ /billing/sales-tax/ 301
-/support/account-management-billing/ /support/troubleshooting/general-troubleshooting/cannot-locate-dashboard-account/ 301 
+/support/account-management-billing/ /support/troubleshooting/general-troubleshooting/cannot-locate-dashboard-account/ 301
 /support/account-management-billing/cannot-locate-dashboard-account/ /support/troubleshooting/general-troubleshooting/cannot-locate-dashboard-account/ 301
 
 # r2
@@ -1631,6 +1631,22 @@
 /workers/static-assets/compatibility-matrix/ /workers/static-assets/migration-guides/migrate-from-pages/ 301
 /workers/static-assets/migrations/vercel-to-workers/ /workers/static-assets/migration-guides/vercel-to-workers/ 301
 /workers/frameworks/framework-guides/remix/ /workers/frameworks/framework-guides/react-router/ 301
+/workers/frameworks/framework-guides/astro/ /workers/frameworks/web-apps/astro/ 301
+/workers/frameworks/framework-guides/nextjs/ /workers/frameworks/web-apps/nextjs/ 301
+/workers/frameworks/framework-guides/react-router/ /workers/frameworks/web-apps/react-router/ 301
+/workers/frameworks/framework-guides/react/ /workers/frameworks/web-apps/react/ 301
+/workers/frameworks/framework-guides/redwoodsdk/ /workers/frameworks/web-apps/redwoodsdk/ 301
+/workers/frameworks/framework-guides/svelte/ /workers/frameworks/web-apps/svelte/ 301
+/workers/frameworks/framework-guides/tanstack/ /workers/frameworks/web-apps/tanstack/ 301
+/workers/frameworks/framework-guides/vue/ /workers/frameworks/web-apps/vue/ 301
+/workers/frameworks/framework-guides/angular/ /workers/frameworks/web-apps/more-web-frameworks/angular/ 301
+/workers/frameworks/framework-guides/docusaurus/ /workers/frameworks/web-apps/more-web-frameworks/docusaurus/ 301
+/workers/frameworks/framework-guides/gatsby/ /workers/frameworks/web-apps/more-web-frameworks/gatsby/ 301
+/workers/frameworks/framework-guides/hono/ /workers/frameworks/web-apps/more-web-frameworks/hono/ 301
+/workers/frameworks/framework-guides/nuxt/ /workers/frameworks/web-apps/more-web-frameworks/nuxt/ 301
+/workers/frameworks/framework-guides/qwik/ /workers/frameworks/web-apps/more-web-frameworks/qwik/ 301
+/workers/frameworks/framework-guides/solid/ /workers/frameworks/web-apps/more-web-frameworks/solid/ 301
+
 /workers/testing/unit-testing/ /workers/testing/vitest-integration/write-your-first-test/ 301
 /workers/testing/integration-testing/ /workers/testing/ 301
 /workers/testing/vitest-integration/get-started/ /workers/testing/vitest-integration/write-your-first-test/ 301
