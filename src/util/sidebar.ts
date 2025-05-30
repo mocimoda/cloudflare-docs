@@ -182,7 +182,8 @@ export function flattenSidebar(sidebar: SidebarEntry[]): Link[] {
 
 function getBadge(link: string): any {
 	if (link.startsWith("/api")) return { text: "API", variant: "note" };
-	if (link.includes("/mcp-server-cloudflare")) return { text: "MCP", variant: "note" };
+	if (link.includes("/mcp-server-cloudflare"))
+		return { text: "MCP", variant: "note" };
 	return undefined;
 }
 
