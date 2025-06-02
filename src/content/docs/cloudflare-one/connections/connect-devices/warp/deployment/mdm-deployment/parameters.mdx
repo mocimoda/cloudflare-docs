@@ -7,7 +7,7 @@ sidebar:
 
 ---
 
-import { GlossaryTooltip} from "~/components"
+import { GlossaryTooltip, InlineBadge} from "~/components"
 
 Each client supports the following set of parameters as part of their deployment, regardless of the deployment mechanism.
 
@@ -96,6 +96,17 @@ Identifies a Zero Trust organization in the WARP GUI when WARP is deployed with 
 **Value Type:** `string`
 
 **Value:** Organization nickname shown to users in the WARP GUI (for example, `Test environment`).
+
+### `enable_post_quantum` <InlineBadge preset="beta" />
+
+Allows WARP to use [post-quantum cryptography](/ssl/post-quantum-cryptography/) to secure UDP connections from the device to Cloudflare's network.
+
+**Value Type:** `boolean`
+
+**Value:**
+
+* `false` — (default) Disables post-quantum key agreement.
+* `true` — Enables post-quantum key agreement.
 
 ### `onboarding`
 
