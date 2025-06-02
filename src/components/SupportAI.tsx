@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { fetchEventSource } from "@microsoft/fetch-event-source";
 import { Ring } from "ldrs/react";
 import "ldrs/react/Ring.css";
@@ -29,7 +30,7 @@ function Messages({
 						key={index}
 						className={`${classes.base} ${message.role === "user" ? classes.user : classes.assistant}`}
 					>
-						<Markdown>{message.content}</Markdown>
+						<Markdown remarkPlugins={[remarkGfm]}>{message.content}</Markdown>
 					</div>
 				))}
 			{loading && (
