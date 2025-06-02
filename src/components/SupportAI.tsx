@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Markdown from "react-markdown";
+import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
 import { fetchEventSource } from "@microsoft/fetch-event-source";
 import { Ring } from "ldrs/react";
@@ -30,7 +31,9 @@ function Messages({
 						key={index}
 						className={`${classes.base} ${message.role === "user" ? classes.user : classes.assistant}`}
 					>
-						<Markdown remarkPlugins={[remarkGfm]}>{message.content}</Markdown>
+						<Markdown remarkPlugins={[remarkGfm, remarkBreaks]}>
+							{message.content}
+						</Markdown>
 					</div>
 				))}
 			{loading && (
@@ -65,8 +68,8 @@ export default function SupportAI() {
 		let sources: Sources = [];
 
 		await fetchEventSource(
-			// "http://localhost:8010/proxy/devdocs/ask",
-			"https://support-ai.cloudflaresupport.workers.dev/devdocs/ask",
+			"http://localhost:8010/proxy/devdocs/ask",
+			// "https://support-ai.cloudflaresupport.workers.dev/devdocs/ask",
 			{
 				method: "POST",
 				body: JSON.stringify({
@@ -110,6 +113,8 @@ export default function SupportAI() {
 									.map((source) => `- [${source.title}](${source.file_path})`)
 									.join("\n"),
 							].join("\n");
+
+							console.log(JSON.stringify(newMessages, null, 2));
 							return newMessages;
 						});
 					}
