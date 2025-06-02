@@ -68,8 +68,8 @@ export default function SupportAI() {
 		let sources: Sources = [];
 
 		await fetchEventSource(
-			"http://localhost:8010/proxy/devdocs/ask",
-			// "https://support-ai.cloudflaresupport.workers.dev/devdocs/ask",
+			// "http://localhost:8010/proxy/devdocs/ask",
+			"https://support-ai.cloudflaresupport.workers.dev/devdocs/ask",
 			{
 				method: "POST",
 				body: JSON.stringify({
@@ -114,7 +114,6 @@ export default function SupportAI() {
 									.join("\n"),
 							].join("\n");
 
-							console.log(JSON.stringify(newMessages, null, 2));
 							return newMessages;
 						});
 					}
